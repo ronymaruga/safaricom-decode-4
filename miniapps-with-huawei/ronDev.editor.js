@@ -1,4 +1,4 @@
-decodeStarter = decodeStarter.extend({
+ronDev = ronDev.extend({
   /*
    * Config to define Widget Properties
    */
@@ -67,7 +67,7 @@ decodeStarter = decodeStarter.extend({
 });
 
 Studio.registerWidget(
-  'decodeStarter',
+  'ronDev',
   '',
   {
     hasMultipleItems: false,

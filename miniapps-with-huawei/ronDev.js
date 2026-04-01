@@ -1,4 +1,4 @@
-var decodeStarter = StudioWidgetWrapper.extend({
+var ronDev = StudioWidgetWrapper.extend({
   init: function (...args) {
     const thisObj = this;
     thisObj._super.apply(thisObj, args);
@@ -36,22 +36,20 @@ var decodeStarter = StudioWidgetWrapper.extend({
     // ║  This is the ONLY section you need to change for your business case ║
     // ╚══════════════════════════════════════════════════════════════════════╝
     const CONFIG = {
-      // ── Business details ────────────────────────────────────────────────
-      // TODO: Change this to your business name
-      businessName: "Biashara Board",
+      businessName: "Juja Biz",
 
       // ── Provider details ─────────────────────────────────────────────────
       // TODO: Change these to your service provider details
-      providerName: "Kamau Wanjiku",
-      providerRole: "Fundi",
+      providerName: "rony maruga",
+      providerRole: "I am a software engineer",
       rating: "4.9",
-      avatarInitials: "KW",
+      avatarInitials: "RM",
       avatarColor: "#E8703A", // TODO: Pick any hex colour for the avatar
 
       // ── Service details ───────────────────────────────────────────────────
       // TODO: Change these to match the service you are selling
-      serviceName: "Pipe Repair",
-      serviceDescription: "Fix leaks, burst pipes, and joints",
+      serviceName: "Web dev",
+      serviceDescription: "Build modern applications",
       servicePrice: 10, // TODO: Full price in KES (integer)
       serviceDuration: "1–2 hours",
 
@@ -59,7 +57,7 @@ var decodeStarter = StudioWidgetWrapper.extend({
       // TODO: Replace with your real M-PESA buygoods till number
       tillNumber: "3350657",
       // TODO: Replace with your business name as it appears on the M-PESA PIN screen
-      tradingName: "Kamau Plumbing",
+      tradingName: "rony maruga dev",
       // Deposit = 50% of servicePrice. Change the multiplier below if needed.
       // Example: 0.5 = 50%, 1.0 = full amount, 0.25 = 25%
       depositRatio: 0.1,
@@ -78,11 +76,11 @@ var decodeStarter = StudioWidgetWrapper.extend({
       }
 
       const script = document.createElement("script");
-      script.src = "https://appx/web-view.min.js";
+      script.src = "https://appx/web-view.min.js"; //load this script to be able to access APIs that are native
       script.async = true;
 
       script.onload = function () {
-        console.log("[decodeStarter] Miniprogram bridge loaded");
+        console.log("[ronDev] Miniprogram bridge loaded");
         demoMode = false; // running inside M-PESA Super App
         callback();
       };
@@ -90,7 +88,7 @@ var decodeStarter = StudioWidgetWrapper.extend({
       script.onerror = function () {
         // Script failed to load — running outside M-PESA Super App
         console.warn(
-          "[decodeStarter] Bridge failed to load — demo mode active",
+          "[ronDev] Bridge failed to load — demo mode active",
         );
         callback();
       };
@@ -104,8 +102,10 @@ var decodeStarter = StudioWidgetWrapper.extend({
     // Demo mode: simulates a 2.5s APP push wait and returns success.
     let resolvePayment = null;
     let rejectPayment = null;
+    //this payment function will mostly be the same, the business logic differs 
     function payWithMpesa(tillNumber, amount, tradingName) {
       return new Promise(function (resolve, reject) {
+        // miniprogram Apis
         if (window.my) {
           // ── LIVE MODE (inside M-PESA Super App) ─────────────────────
           // Send payment request to the miniprogram shell.
@@ -123,9 +123,9 @@ var decodeStarter = StudioWidgetWrapper.extend({
           // window.my not available — browser / AppCube Studio preview.
           // Simulates a 2.5s APP push wait then returns success.
           // No code change needed when deployed inside M-PESA Super App.
-          console.log("[decodeStarter] Demo mode — simulating M-PESA payment");
+          console.log("[ronDev] Demo mode — simulating M-PESA payment");
           console.log(
-            "[decodeStarter] Till:",
+            "[ronDev] Till:",
             tillNumber,
             "| Amount: KES",
             amount,
@@ -185,7 +185,7 @@ var decodeStarter = StudioWidgetWrapper.extend({
           this.isDemoMode = !window.my;
           if (window.my) {
             window.my.onMessage = (result) => {
-              console.log("[decodeStarter] onMessage:", JSON.stringify(result));
+              console.log("[ronDev] onMessage:", JSON.stringify(result));
               if (result.type !== "paymentResponse") return;
               if (result.success === true) {
                 resolvePayment && resolvePayment(result);
@@ -249,7 +249,7 @@ var decodeStarter = StudioWidgetWrapper.extend({
     });
 
     app.use(i18n);
-    app.mount($("#decodeStarter", elem)[0]);
+    app.mount($("#ronDev", elem)[0]);
 
     $(window).resize(() => {
       thisObj.sksRefreshEvents();
