@@ -1,0 +1,484 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   STARTER TEMPLATE — Book a Service
+   Biashara Board design language: dark bento, green accents
+   ══════════════════════════════════════════════════════════════════════════ */
+
+#decodeStarter *,
+#decodeStarter *::before,
+#decodeStarter *::after {
+  box-sizing: border-box;
+  margin: 4;
+  padding: 4;
+}
+
+#decodeStarter {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f2f4f3;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 32px;
+}
+
+/* ── Header ───────────────────────────────────────────────────────────────── */
+.st-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 10px;
+}
+
+.st-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.st-header__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #1db954;
+}
+
+.st-header__name {
+  font-size: 17px;
+  font-weight: 800;
+  color: #111816;
+  letter-spacing: -0.3px;
+}
+
+/* Demo badge */
+.st-header__demo-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: #e8703a;
+  background: rgba(232, 112, 58, 0.12);
+  border: 1px solid rgba(232, 112, 58, 0.3);
+  border-radius: 20px;
+  padding: 4px 10px;
+}
+
+/* ── Hero card (dark bento) ───────────────────────────────────────────────── */
+.st-hero {
+  margin: 0 16px 10px;
+  background: #111816;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+  min-height: 110px;
+}
+
+/* Decorative ring */
+.st-hero__deco {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 1px solid rgba(29, 185, 84, 0.12);
+  right: -40px;
+  bottom: -50px;
+  pointer-events: none;
+}
+
+.st-hero__avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.st-hero__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.st-hero__name {
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.4px;
+}
+
+.st-hero__role {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1db954;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.st-hero__rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.st-hero__stars {
+  font-size: 12px;
+  color: #f5c518;
+  letter-spacing: 1px;
+}
+
+.st-hero__rating-val {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── Service card ─────────────────────────────────────────────────────────── */
+.st-service {
+  margin: 0 16px 10px;
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid #e2eae2;
+  padding: 16px;
+}
+
+.st-service__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.st-service__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.st-service__label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #7a8c7a;
+  font-weight: 600;
+}
+
+.st-service__name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111816;
+  letter-spacing: -0.2px;
+}
+
+.st-service__desc {
+  font-size: 12px;
+  color: #7a8c7a;
+  line-height: 1.4;
+}
+
+.st-service__price-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.st-service__price-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #7a8c7a;
+  font-weight: 600;
+}
+
+.st-service__price {
+  font-size: 18px;
+  font-weight: 900;
+  color: #111816;
+  letter-spacing: -0.5px;
+}
+
+.st-service__divider {
+  height: 1px;
+  background: #f0f4f0;
+  margin-bottom: 12px;
+}
+
+.st-service__deposit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0faf2;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+.st-service__deposit-label {
+  font-size: 12px;
+  color: #3d4a3e;
+  font-weight: 500;
+}
+
+.st-service__deposit-amount {
+  font-size: 16px;
+  font-weight: 900;
+  color: #1db954;
+  letter-spacing: -0.3px;
+}
+
+.st-service__duration-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.st-service__duration-icon {
+  font-size: 13px;
+}
+
+.st-service__duration {
+  font-size: 12px;
+  color: #7a8c7a;
+}
+
+/* ── Payment section ──────────────────────────────────────────────────────── */
+.st-payment {
+  margin: 0 16px;
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid #e2eae2;
+  padding: 16px;
+}
+
+.st-payment__mpesa-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.st-payment__mpesa-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #111816;
+  color: #1db954;
+  font-size: 20px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.st-payment__mpesa-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111816;
+}
+
+.st-payment__mpesa-sub {
+  display: block;
+  font-size: 11px;
+  color: #7a8c7a;
+  margin-top: 2px;
+}
+
+/* Pay button */
+.st-payment__btn {
+  width: 100%;
+  padding: 16px 20px;
+  background: #111816;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition:
+    opacity 0.15s,
+    transform 0.1s;
+  margin-bottom: 12px;
+}
+
+.st-payment__btn:active:not(:disabled) {
+  transform: scale(0.985);
+  opacity: 0.9;
+}
+
+.st-payment__btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.st-payment__btn--success {
+  background: #1db954;
+}
+
+/* Spinner */
+.st-payment__spinner-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.st-payment__spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: st-spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes st-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error */
+.st-payment__error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: #fff0f0;
+  border: 1px solid #ffcdd2;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #b71c1c;
+  margin-bottom: 12px;
+}
+
+.st-payment__retry {
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.st-payment__note {
+  font-size: 11px;
+  color: #7a8c7a;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ── Success overlay card ─────────────────────────────────────────────────── */
+.st-success {
+  margin: 10px 16px 0;
+  background: #111816;
+  border-radius: 20px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.st-success__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: #1db954;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.st-success__title {
+  font-size: 22px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.4px;
+}
+
+.st-success__sub {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.5;
+}
+
+.st-success__ref {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin: 4px 0;
+}
+
+.st-success__ref-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.st-success__ref-val {
+  font-size: 20px;
+  font-weight: 900;
+  color: #1db954;
+  letter-spacing: 3px;
+  font-family: "Courier New", monospace;
+}
+
+.st-success__demo {
+  font-size: 10px;
+  color: #e8703a;
+  line-height: 1.5;
+}
+
+.st-success__reset {
+  margin-top: 6px;
+  padding: 12px 28px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.st-success__reset:active {
+  background: rgba(255, 255, 255, 0.14);
+}

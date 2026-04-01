@@ -1,0 +1,28 @@
+{
+    "widgetApi": [
+        {
+            "name": "decodeStarter"
+        }
+    ],
+    "i18n": [
+        {
+            "name": "messages-en"
+        },
+        {
+            "name": "messages-zh"
+        }
+    ],
+    "widgetDescription": "",
+    "authorName": "",
+    "localFileBasePath": "",
+    "requires": [
+        {
+            "name": "global_Vue3",
+            "version": "3.5.13"
+        },
+        {
+            "name": "global_Vue3I18n",
+            "version": "10.0.8"
+        }
+    ]
+}
