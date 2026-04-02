@@ -40,10 +40,10 @@ var ronDev = StudioWidgetWrapper.extend({
 
       // ── Provider details ─────────────────────────────────────────────────
       // TODO: Change these to your service provider details
-      providerName: "rony maruga",
+      providerName: "ron",
       providerRole: "I am a software engineer",
       rating: "4.9",
-      avatarInitials: "RM",
+      avatarInitials: "RN",
       avatarColor: "#E8703A", // TODO: Pick any hex colour for the avatar
 
       // ── Service details ───────────────────────────────────────────────────
@@ -57,7 +57,7 @@ var ronDev = StudioWidgetWrapper.extend({
       // TODO: Replace with your real M-PESA buygoods till number
       tillNumber: "3350657",
       // TODO: Replace with your business name as it appears on the M-PESA PIN screen
-      tradingName: "rony maruga dev",
+      tradingName: "ron dev",
       // Deposit = 50% of servicePrice. Change the multiplier below if needed.
       // Example: 0.5 = 50%, 1.0 = full amount, 0.25 = 25%
       depositRatio: 0.1,

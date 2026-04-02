@@ -1,0 +1,4 @@
+<view>
+  <web-view id="decodeStarter" src="https://dev-sg.appcubecloud.com/magno/render/HKIC__DecodeTemplate_0000000000vF8747q4zR/Home" onMessage="onMessage">
+  </web-view>
+</view>
